@@ -1591,5 +1591,14 @@ string System::CalculateCheckSum(string filename, int type)
     return checksum;
 }
 
+cv::Mat System::GetAnnotatedFrame(float imageScale)
+{
+    if (mpFrameDrawer)
+    {
+        return mpFrameDrawer->DrawFrame(imageScale);
+    }
+    return cv::Mat();
+}
+
 } //namespace ORB_SLAM
 

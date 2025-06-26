@@ -23,12 +23,11 @@ namespace ORB_SLAM3 {
         for (int i=0; i<2; i++){
             is >> _measurement[i];
         }
-        for (int i=0; i<2; i++)
-            for (int j=i; j<2; j++) {
-                is >> information()(i,j);
-                if (i!=j)
-                    information()(j,i)=information()(i,j);
-            }
+        // Read upper triangular part of 2x2 symmetric matrix
+        is >> information()(0,0);
+        is >> information()(0,1);
+        is >> information()(1,1);
+        information()(1,0) = information()(0,1); // Symmetric
         return true;
     }
 

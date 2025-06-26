@@ -8,16 +8,18 @@ File.version: "1.0"
 Camera.type: "PinHole"
 
 # Camera calibration and distortion parameters (OpenCV) 
+# Using the intrinsics from your JSON configuration
 Camera1.fx: 1865.182312
 Camera1.fy: 1865.182312
 Camera1.cx: 1897.95874
 Camera1.cy: 954.322021
 
-Camera1.k1: 0.262383
-Camera1.k2: -0.953104
-Camera1.p1: -0.005358
-Camera1.p2: 0.002628
-Camera1.k3: 1.163314
+# Minimal distortion parameters (assuming your camera has minimal distortion)
+Camera1.k1: 0.0
+Camera1.k2: 0.0
+Camera1.p1: 0.0
+Camera1.p2: 0.0
+Camera1.k3: 0.0
 
 # Camera frames per second 
 Camera.fps: 30
@@ -61,5 +63,4 @@ Viewer.CameraLineWidth: 3.0
 Viewer.ViewpointX: 0.0
 Viewer.ViewpointY: -0.7
 Viewer.ViewpointZ: -1.8
-Viewer.ViewpointF: 500.0
-
+Viewer.ViewpointF: 500.0 

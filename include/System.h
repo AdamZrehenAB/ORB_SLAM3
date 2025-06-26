@@ -179,6 +179,9 @@ public:
     std::vector<MapPoint*> GetTrackedMapPoints();
     std::vector<cv::KeyPoint> GetTrackedKeyPointsUn();
 
+    // Get annotated frame for visualization
+    cv::Mat GetAnnotatedFrame(float imageScale = 1.0f);
+
     // For debugging
     double GetTimeFromIMUInit();
     bool isLost();
